@@ -29,10 +29,6 @@ public class TicTacToe_Application extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tempText = new javax.swing.JTextField();
-        playerSelectButton = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        display = new javax.swing.JTextArea();
         button = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         playerTextField = new javax.swing.JTextField();
@@ -53,21 +49,14 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         button15 = new javax.swing.JButton();
         winnerField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        playerTurnField = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        yesButton = new javax.swing.JButton();
+        noButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        tempText.setText("Enter message here...");
-
-        playerSelectButton.setText("Enter Selection");
-        playerSelectButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                playerSelectButtonActionPerformed(evt);
-            }
-        });
-
-        display.setColumns(20);
-        display.setRows(5);
-        jScrollPane1.setViewportView(display);
 
         button.setText("---");
         button.setMaximumSize(new java.awt.Dimension(60, 60));
@@ -223,134 +212,135 @@ public class TicTacToe_Application extends javax.swing.JFrame {
 
         jLabel2.setText("Winner:");
 
+        jLabel3.setText("Player's Turn:");
+
+        jLabel4.setText("Play Again?");
+
+        yesButton.setText("Yes");
+
+        noButton.setText("No");
+
+        jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        jLabel5.setText("Tic Tac Toe!");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(229, 229, 229)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(tempText, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(playerSelectButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(playerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 6, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(button12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2))
+                                .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(winnerField)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(button13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(yesButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(noButton))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(winnerField))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(playerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jLabel3)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(playerTurnField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(208, 208, 208))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(button, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addGap(64, 64, 64))
+                                .addComponent(button12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(button, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(jLabel5)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tempText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(playerSelectButton))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel1)
-                                    .addComponent(playerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button7, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button9, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button10, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(button12, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button13, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button14, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(button15, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(18, 18, 18)
-                        .addComponent(winnerField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addGap(8, 8, 8)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button7, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button9, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button10, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button11, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button12, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button13, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button14, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button15, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(playerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(playerTurnField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(winnerField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(yesButton)
+                    .addComponent(noButton))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void playerSelectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerSelectButtonActionPerformed
-//         if (boardInfo.charAt(0) == 'X') {// demo for player X
-//           if (boardInfo.charAt(2) == 'N'){ 
-//               
-//              boardInfo = boardInfo.substring(0,2) + boardInfo.charAt(0) + boardInfo.substring(3);
-//              player.playerMadeSelection(boardInfo);
-//           }
-//        }
-//        else// player is O...use when O selects button
-//        {
-//           if (boardInfo.charAt(3) == 'N'){ 
-//             boardInfo = boardInfo.substring(0,3) + boardInfo.charAt(0) + boardInfo.substring(4);
-//             player.playerMadeSelection(boardInfo);
-//           }
-//        }
-//           if ( (boardInfo.charAt(0) ==  boardInfo.charAt(1))&& (boardInfo.charAt(2) == 'N') ){ // button controller for button 1
-//              boardInfo = boardInfo.substring(0,2) + boardInfo.charAt(0) + boardInfo.substring(3);
-//              player.playerMadeSelection(boardInfo);
-//           } // TODO: use this and adjust for EACH Button that controls placement
-    }//GEN-LAST:event_playerSelectButtonActionPerformed
 
     private void buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonActionPerformed
         if ( (boardInfo.charAt(0) ==  boardInfo.charAt(1)) && (boardInfo.charAt(2) == 'N') ){ // button controller for button 1
@@ -523,14 +513,16 @@ public class TicTacToe_Application extends javax.swing.JFrame {
     private javax.swing.JButton button7;
     private javax.swing.JButton button8;
     private javax.swing.JButton button9;
-    private javax.swing.JTextArea display;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton playerSelectButton;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton noButton;
     private javax.swing.JTextField playerTextField;
-    private javax.swing.JTextField tempText;
+    private javax.swing.JTextField playerTurnField;
     private javax.swing.JTextField winnerField;
+    private javax.swing.JButton yesButton;
     // End of variables declaration//GEN-END:variables
 
  private String boardInfo;
@@ -539,176 +531,11 @@ public class TicTacToe_Application extends javax.swing.JFrame {
  
     public void updateBoard(String b) {
         boardInfo = b;
-        display.append(b+"\n");
         
-        playerTextField.setText(String.valueOf(boardInfo.charAt(1)));
+        playerTextField.setText(String.valueOf(boardInfo.charAt(0)));
+        playerTurnField.setText(String.valueOf(boardInfo.charAt(1)));
 
-        String win5 = (new StringBuilder()).append(boardInfo.charAt(2)).append(boardInfo.charAt(6)).append(boardInfo.charAt(10)).append(boardInfo.charAt(14)).toString();
-        String win6 = (new StringBuilder()).append(boardInfo.charAt(3)).append(boardInfo.charAt(7)).append(boardInfo.charAt(11)).append(boardInfo.charAt(15)).toString();
-        String win7 = (new StringBuilder()).append(boardInfo.charAt(4)).append(boardInfo.charAt(8)).append(boardInfo.charAt(12)).append(boardInfo.charAt(16)).toString();
-        String win8 = (new StringBuilder()).append(boardInfo.charAt(5)).append(boardInfo.charAt(9)).append(boardInfo.charAt(13)).append(boardInfo.charAt(17)).toString();
-        String win9 = (new StringBuilder()).append(boardInfo.charAt(2)).append(boardInfo.charAt(7)).append(boardInfo.charAt(12)).append(boardInfo.charAt(17)).toString();        
-        String win10 = (new StringBuilder()).append(boardInfo.charAt(5)).append(boardInfo.charAt(8)).append(boardInfo.charAt(11)).append(boardInfo.charAt(14)).toString();
-
-        
-        int xWin = 1;
-        int oWin = 1;
-        
-        winnerField.setText("Let's Play!");
-        
-        // Start of winning scenarios
-
-        // win 1
-        if ( "XXXX".equals(boardInfo.substring(2, 6)) || "OOOO".equals(boardInfo.substring(2,6)) ) {  // Win scenario 1
-            if ("XXXX".equals(boardInfo.substring(2, 6))) {
-                winnerField.setText("Player X wins!");
-                boardInfo = boardInfo.substring(0,18) + Integer.toString(xWin) + boardInfo.substring(19,20) + "X" + boardInfo.substring(21);
-                xWin++;
-            }
-            else {
-                winnerField.setText("Player O wins!");
-                boardInfo = boardInfo.substring(0,19) + Integer.toString(oWin) + "O" + boardInfo.substring(21);
-                oWin++;
-            }
-        }
-        // win 2
-        else if ( "XXXX".equals(boardInfo.substring(6, 10)) || "OOOO".equals(boardInfo.substring(6,10)) ) {
-            if ("XXXX".equals(boardInfo.substring(6, 10))) {
-                winnerField.setText("Player X wins!");
-                boardInfo = boardInfo.substring(0,18) + Integer.toString(xWin) + boardInfo.substring(19,20) + "X" + boardInfo.substring(21);
-                xWin++;
-            }
-            else {
-                winnerField.setText("Player O wins!");
-                boardInfo = boardInfo.substring(0,19) + Integer.toString(oWin) + "O" + boardInfo.substring(21);
-                oWin++;
-            }
-        }
-        // win 3
-        else if ( "XXXX".equals(boardInfo.substring(10, 14)) || "OOOO".equals(boardInfo.substring(10,14)) ) { 
-            if ("XXXX".equals(boardInfo.substring(10, 14))) {
-                winnerField.setText("Player X wins!");
-                boardInfo = boardInfo.substring(0,18) + Integer.toString(xWin) + boardInfo.substring(19,20) + "X" + boardInfo.substring(21);
-                xWin++;
-            }
-            else {
-                winnerField.setText("Player O wins!");
-                boardInfo = boardInfo.substring(0,19) + Integer.toString(oWin) + "O" + boardInfo.substring(21);
-                oWin++;
-            }
-        }
-        // win 4
-        else if ( "XXXX".equals(boardInfo.substring(14, 18)) || "OOOO".equals(boardInfo.substring(14,18)) ) {
-            if ("XXXX".equals(boardInfo.substring(14, 18))) {
-                winnerField.setText("Player X wins!");
-                boardInfo = boardInfo.substring(0,18) + Integer.toString(xWin) + boardInfo.substring(19,20) + "X" + boardInfo.substring(21);
-                xWin++;
-            }
-            else {
-                winnerField.setText("Player O wins!");
-                boardInfo = boardInfo.substring(0,19) + Integer.toString(oWin) + "O" + boardInfo.substring(21);
-                oWin++;
-            }
-        }    
-        // win5
-        else if ( "XXXX".equals(win5) || "OOOO".equals(win5) ) {
-            if ("XXXX".equals(win5)) {
-                winnerField.setText("Player X wins!");
-                boardInfo = boardInfo.substring(0,18) + Integer.toString(xWin) + boardInfo.substring(19,20) + "X" + boardInfo.substring(21);
-                xWin++;
-            }
-            else {
-                winnerField.setText("Player O wins!");
-                boardInfo = boardInfo.substring(0,19) + Integer.toString(oWin) + "O" + boardInfo.substring(21);
-                oWin++;
-            }
-        }    
-        // win6
-        else if ( "XXXX".equals(win6) || "OOOO".equals(win6) ) {
-            if ("XXXX".equals(win6)) {
-                winnerField.setText("Player X wins!");
-                boardInfo = boardInfo.substring(0,18) + Integer.toString(xWin) + boardInfo.substring(19,20) + "X" + boardInfo.substring(21);
-                xWin++;
-            }
-            else {
-                winnerField.setText("Player O wins!");
-                boardInfo = boardInfo.substring(0,19) + Integer.toString(oWin) + "O" + boardInfo.substring(21);
-                oWin++;
-            }
-        }    
-        // win7
-        else if ( "XXXX".equals(win7) || "OOOO".equals(win7) ) {
-            if ("XXXX".equals(win7)) {
-                winnerField.setText("Player X wins!");
-                boardInfo = boardInfo.substring(0,18) + Integer.toString(xWin) + boardInfo.substring(19,20) + "X" + boardInfo.substring(21);
-                xWin++;
-            }
-            else {
-                winnerField.setText("Player O wins!");
-                boardInfo = boardInfo.substring(0,19) + Integer.toString(oWin) + "O" + boardInfo.substring(21);
-                oWin++;
-            }
-        }
-        // win 8
-        else if ( "XXXX".equals(win8) || "OOOO".equals(win8) ) {
-            if ("XXXX".equals(win8)) {
-                winnerField.setText("Player X wins!");
-                boardInfo = boardInfo.substring(0,18) + Integer.toString(xWin) + boardInfo.substring(19,20) + "X" + boardInfo.substring(21);
-                xWin++;
-            }
-            else {
-                winnerField.setText("Player O wins!");
-                boardInfo = boardInfo.substring(0,19) + Integer.toString(oWin) + "O" + boardInfo.substring(21);
-                oWin++;
-            }
-        }
-        // win 9
-        else if ( "XXXX".equals(win9) || "OOOO".equals(win9) ) {
-            if ("XXXX".equals(win9)) {
-                winnerField.setText("Player X wins!");
-                boardInfo = boardInfo.substring(0,18) + Integer.toString(xWin) + boardInfo.substring(19,20) + "X" + boardInfo.substring(21);
-                xWin++;
-            }
-            else {
-                winnerField.setText("Player O wins!");
-                boardInfo = boardInfo.substring(0,19) + Integer.toString(oWin) + "O" + boardInfo.substring(21);
-                oWin++;
-            }
-        }
-        // win 10
-        else if ( "XXXX".equals(win10) || "OOOO".equals(win10) ) {
-            if ("XXXX".equals(win10)) {
-                winnerField.setText("Player X wins!");
-                boardInfo = boardInfo.substring(0,18) + Integer.toString(xWin) + boardInfo.substring(19,20) + "X" + boardInfo.substring(21);
-                xWin++;
-            }
-            else {
-                winnerField.setText("Player O wins!");
-                boardInfo = boardInfo.substring(0,19) + Integer.toString(oWin) + "O" + boardInfo.substring(21);
-                oWin++;
-            }
-        }
-        // Tie Game
-        else {
-            winnerField.setText("Tie Game!");
-        }
-            
-        System.out.println(xWin);
-        System.out.println(oWin);
-        
-//        boardInfo = boardInfo.substring(0,18) + Integer.toString(xWin) + boardInfo.charAt(19) + boardInfo.charAt(0) + boardInfo.substring(21);
-
-        System.out.println( boardInfo.substring(0,18) );
-        System.out.println( boardInfo.charAt(18) );
-        System.out.println( boardInfo.charAt(19) );
-        System.out.println( boardInfo.charAt(20) );
-        System.out.println( boardInfo.substring(21) );
-        System.out.println( boardInfo.charAt(0) );
-        
-         // End of winning scenarios
-        
         // Start Button controls based on user input.
-        
         if (boardInfo.charAt(2) == 'N') {
             button.setText("---");
         } 
@@ -718,7 +545,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(2) == 'X'
             button.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(3) == 'N') {
             button1.setText("---");
         } 
@@ -728,7 +555,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(3) == 'X'
             button1.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(4) == 'N') {
             button2.setText("---");
         } 
@@ -738,7 +565,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(4) == 'X'
             button2.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(5) == 'N') {
             button3.setText("---");
         } 
@@ -748,7 +575,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(5) == 'X'
             button3.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(6) == 'N') {
             button4.setText("---");
         } 
@@ -758,7 +585,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(6) == 'X'
             button4.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(7) == 'N') {
             button5.setText("---");
         } 
@@ -768,7 +595,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(7) == 'X'
             button5.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(8) == 'N') {
             button6.setText("---");
         } 
@@ -778,7 +605,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(8) == 'X'
             button6.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(9) == 'N') {
             button7.setText("---");
         } 
@@ -788,7 +615,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(9) == 'X'
             button7.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(10) == 'N') {
             button8.setText("---");
         } 
@@ -798,7 +625,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(10) == 'X' 
             button8.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(11) == 'N') {
             button9.setText("---");
         } 
@@ -808,7 +635,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(11) == 'X'
             button9.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(12) == 'N') {
             button10.setText("---");
         } 
@@ -818,7 +645,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(12) == 'X'
             button10.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(13) == 'N') {
             button11.setText("---");
         } 
@@ -828,7 +655,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(13) == 'X'
             button11.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(14) == 'N') {
             button12.setText("---");
         } 
@@ -838,7 +665,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(14) == 'X'
             button12.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(15) == 'N') {
             button13.setText("---");
         } 
@@ -848,7 +675,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(15) == 'X'
             button13.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(16) == 'N') {
             button14.setText("---");
         } 
@@ -858,7 +685,7 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         else { //boardInfo.charAt(16) == 'X'
             button14.setText(" X ");
         }
-        
+
         if (boardInfo.charAt(17) == 'N') {
             button15.setText("---");
         } 
@@ -867,8 +694,19 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         }
         else if (boardInfo.charAt(17) == 'X') { //boardInfo.charAt(17) == 'X'
             button15.setText(" X ");
-        }        
+        }  
+            
+        if ( boardInfo.charAt(20) == 'X' || boardInfo.charAt(20) == 'O' ) {
+            winnerField.setText("Player " + boardInfo.charAt(20) + " wins!");
+            
+        } else if ( boardInfo.charAt(20) == 'T') {
+            winnerField.setText("Tie Game!");
+        }
+        else {
+             winnerField.setText(" ");
+        }
         
+        System.out.println(boardInfo);
         // End Button controls based on user input.
     }
 }
