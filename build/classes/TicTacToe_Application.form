@@ -66,66 +66,81 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="button11" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="button12" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="button12" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="button13" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="button14" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="button15" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="winnerField" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="button13" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="button14" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="button15" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="265" pref="64" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="tempText" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="playerSelectButton" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" alignment="0" min="-2" pref="212" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="playerTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="button" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button1" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button2" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button3" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="tempText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="playerSelectButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="button4" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button5" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button6" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button7" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane1" alignment="0" min="-2" pref="212" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="playerTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="button" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button1" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button2" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button3" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="button4" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button5" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button6" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button7" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="button8" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button9" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button10" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button11" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="button12" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button13" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button14" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="button15" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="button8" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button9" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button10" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button11" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="button12" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button13" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button14" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="button15" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="winnerField" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="245" max="32767" attributes="0"/>
+              <EmptySpace pref="203" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -389,6 +404,16 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button15ActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="winnerField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="winnerFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Winner:"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
