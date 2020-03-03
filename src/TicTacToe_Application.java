@@ -7,6 +7,8 @@
 /**
  *
  * @author dls102
+ * @edited dpg5252
+ * 
  */
 public class TicTacToe_Application extends javax.swing.JFrame {
 
@@ -201,12 +203,6 @@ public class TicTacToe_Application extends javax.swing.JFrame {
         button15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button15ActionPerformed(evt);
-            }
-        });
-
-        winnerField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                winnerFieldActionPerformed(evt);
             }
         });
 
@@ -461,10 +457,6 @@ public class TicTacToe_Application extends javax.swing.JFrame {
           player.playerMadeSelection(boardInfo);
        }
     }//GEN-LAST:event_button15ActionPerformed
-
-    private void winnerFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_winnerFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_winnerFieldActionPerformed
 
     private void yesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesButtonActionPerformed
         if (  "XX".equals(boardInfo.substring(0,2)) ){ 
