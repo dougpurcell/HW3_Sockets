@@ -480,13 +480,15 @@ public class TicTacToe_Application extends javax.swing.JFrame {
 
     private void noButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noButtonActionPerformed
         if (  "XX".equals(boardInfo.substring(0,2)) ){ 
-          boardInfo = boardInfo.substring(0,21) + "N" + boardInfo.charAt(22);
-          player.playerMadeSelection(boardInfo);
+            boardInfo = boardInfo.substring(0,21) + "N" + boardInfo.charAt(22);
+            player.playerMadeSelection(boardInfo);
+            winnerField.setText("Game Over. Thanks for playing!");
         } 
         
         if ( "OO".equals(boardInfo.substring(0,2)) ) {
-           boardInfo = boardInfo.substring(0,21) + boardInfo.charAt(21) + "N";
-           player.playerMadeSelection(boardInfo);
+            boardInfo = boardInfo.substring(0,21) + boardInfo.charAt(21) + "N";
+            player.playerMadeSelection(boardInfo);
+            winnerField.setText("Game Over. Thanks for playing!");
        }
     }//GEN-LAST:event_noButtonActionPerformed
 
@@ -740,6 +742,9 @@ public class TicTacToe_Application extends javax.swing.JFrame {
             winnerField.setText("Tie Game!");
             yesButton.setEnabled(true);
             noButton.setEnabled(true);
+        }
+        else if (boardInfo.charAt(20) == 'X') {
+            winnerField.setText("Game Over - thanks for Playing!");
         }
         else {
              winnerField.setText(" ");
